@@ -23,3 +23,20 @@ menuIcon.onclick =()=>{
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+const sendBtn = document.querySelector('#contact-form .btn');
+
+sendBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Show the prompt
+    const userResponse = prompt('Please enter your message:');
+
+    // Check if the user entered something
+    if (userResponse) {
+        // You can now process the user's input, e.g., send it to a server or display it on the page
+        console.log('User message:', userResponse);
+    } else {
+        alert('No message provided.');
+    }
+});
